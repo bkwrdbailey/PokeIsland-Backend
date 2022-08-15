@@ -16,7 +16,7 @@ public class PostService : IPostService
         await _dl.createNewPost(newPost);
     }
 
-    public async Task<List<Post>> getPosts(int pageNum)
+    public async Task<Pagination<Post>> getPosts(int pageNum)
     {
         return await _dl.getPosts(pageNum);
     }

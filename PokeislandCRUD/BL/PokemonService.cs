@@ -15,4 +15,14 @@ public class PokemonService : IPokemonService
     {
         return await _dl.getAllUsersPokemon(userId);
     }
+
+    public async Task addUserPokemon(Pokemon poke)
+    {
+        await _dl.addNewPokemon(poke);
+    }
+
+    public async Task updateUserPokemon(List<Pokemon> poke)
+    {
+        await _dl.updateUserPokemon(poke);
+    }
 }

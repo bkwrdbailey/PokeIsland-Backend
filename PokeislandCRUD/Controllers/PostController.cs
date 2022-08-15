@@ -14,14 +14,14 @@ public class PostController : ControllerBase
         _bl = bl;
     }
 
-    [HttpGet("post/{}")]
-    public async Task<List<Post>> getPosts(int pageNum)
+    [HttpGet("post/{pageNum}")]
+    public async Task<Pagination<Post>> getPosts(int pageNum)
     {
         return await _bl.getPosts(pageNum);
     }
 
     [HttpPost("post/{newPost}")]
-    public async Task addPost(Post newPost)
+    public async Task addPost([FromBody] Post newPost)
     {
         await _bl.addPost(newPost);
     }

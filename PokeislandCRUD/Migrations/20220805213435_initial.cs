@@ -41,7 +41,9 @@ namespace PokeislandCRUD.Migrations
                     hp = table.Column<int>(type: "int", nullable: false),
                     spDef = table.Column<int>(type: "int", nullable: false),
                     spAtk = table.Column<int>(type: "int", nullable: false),
-                    spd = table.Column<int>(type: "int", nullable: false)
+                    spd = table.Column<int>(type: "int", nullable: false),
+                    current_level = table.Column<int>(type: "int", nullable: false),
+                    def = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

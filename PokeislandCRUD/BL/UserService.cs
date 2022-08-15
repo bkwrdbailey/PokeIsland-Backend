@@ -20,4 +20,9 @@ public class UserService : IUserService
     {
         await _dl.addUser(newUser);
     }
+
+    public async Task<User> getUserById(int userId)
+    {
+        return await _dl.getUserById(userId); 
+    }
 }

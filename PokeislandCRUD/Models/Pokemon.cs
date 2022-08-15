@@ -11,9 +11,11 @@ public class Pokemon {
     public string? secondMove { get; set; }
     public string? thirdMove { get; set; }
     public string? fourthMove { get; set; }
-    public int atk { get; set; }
     public int hp { get; set; }
+    public int atk { get; set; }
     public int spDef { get; set; }
     public int spAtk { get; set; }
     public int spd { get; set; }
+    public int current_level { get; set; }
+    public int def { get; set; }
 }

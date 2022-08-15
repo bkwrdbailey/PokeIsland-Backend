@@ -13,14 +13,20 @@ public class CommentController : ControllerBase
         _bl = bl;
     }
 
-    [HttpGet("comment/{}")]
-    public async Task<List<Comment>> getComments(int postId)
+    [HttpGet("comment/{postId}")]
+    public async Task<Pagination<Comment>> getComments(int postId)
     {
         return await _bl.getComments(postId);
     }
 
-    [HttpPost("comment/{}")]
-    public async Task addComment(Comment newComment)
+    [HttpGet("comment/{postId}&{pageNum}")]
+    public async Task<Pagination<Comment>> getMoreComments(int postId, int pageNum)
+    {
+        return await _bl.getMoreComments(postId, pageNum);
+    }
+
+    [HttpPost("comment")]
+    public async Task addComment([FromBody] Comment newComment)
     {
         await _bl.addComment(newComment);
     }

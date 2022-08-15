@@ -11,9 +11,14 @@ public class CommentService : ICommentService
         _dl = dl;
     }
 
-    public async Task<List<Comment>> getComments(int postId)
+    public async Task<Pagination<Comment>> getComments(int postId)
     {
         return await _dl.getComments(postId);
+    }
+
+    public async Task<Pagination<Comment>> getMoreComments(int postId, int pageNum)
+    {
+        return await _dl.getMoreComments(postId, pageNum);
     }
 
     public async Task addComment(Comment newComment)

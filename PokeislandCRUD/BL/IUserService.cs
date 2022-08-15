@@ -6,4 +6,5 @@ public interface IUserService
 {
     Task<User> getUser(string username);
     Task createUser(User newUser);
+    Task<User> getUserById(int userId);
 }

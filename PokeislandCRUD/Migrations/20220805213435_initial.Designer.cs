@@ -56,6 +56,12 @@ namespace PokeislandCRUD.Migrations
                     b.Property<int>("atk")
                         .HasColumnType("int");
 
+                    b.Property<int>("current_level")
+                        .HasColumnType("int");
+
+                    b.Property<int>("def")
+                        .HasColumnType("int");
+
                     b.Property<int>("experience")
                         .HasColumnType("int");
 
